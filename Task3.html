@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .gallery {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 30px;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    .large-image {
+        border: 3px solid #c5c4c4;
+        max-width: 100%;
+        height: auto;
+    }
+    .thumbnail {
+        display: inline-block;
+        margin: 5px;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    .thumbnail:hover {
+        border-color: #333333;
+    }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+    <h2>Image Gallery</h2>
+    <iframe class="large-image" src="icons1/cat_box_256.png" frameborder="0"></iframe>
+    <div class="thumbnails">
+        <img class="thumbnail" src="icons1/cat_tied_64.png" alt="Image 1" onclick="changeImage('icons1/cat_tied_256.png')">
+        <img class="thumbnail" src="icons1/cat_cage_64.png" alt="Image 2" onclick="changeImage('icons1/cat_cage_256.png')">
+        <img class="thumbnail" src="icons1/cat_clean_64.png" alt="Image 3" onclick="changeImage('icons1/cat_clean_256.png')">
+        <img class="thumbnail" src="icons1/cat_eyes_64.png" alt="Image 3" onclick="changeImage('icons1/cat_eyes_256.png')">
+        <img class="thumbnail" src="icons1/cat_purr_64.png" alt="Image 3" onclick="changeImage('icons1/cat_purr_256.png')">
+    </div>
+</div>
+
+<script>
+    function changeImage(src) {
+        document.querySelector('.large-image').src = src;
+    }
+</script>
+
+</body>
+</html>
